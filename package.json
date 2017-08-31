@@ -43,6 +43,7 @@
     "io-client": "ts-node bin/io-client",
     "dev": "ts-node dev.ts",
     "demo": "ts-node example/ding-dong-bot.ts",
+    "hot-demo": "node example/hot-reload-bot/index.js",
     "start": "npm run demo"
   },
   "repository": {

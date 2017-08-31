@@ -731,11 +731,12 @@ export class MediaMessage extends Message {
 
             case AppMsgType.URL:
             case AppMsgType.READER_TYPE:
-              if (!this.rawObj.Url) {
-                throw new Error('no Url')
-              }
+              // if (!this.rawObj.Url) {
+              //   throw new Error('no Url')
+              // }
               // had set in Message
-              // url = this.rawObj.Url
+              // for no url message
+              url = this.rawObj.Url || ''
               break
 
             default:
@@ -758,7 +759,8 @@ export class MediaMessage extends Message {
 
       if (!url) {
         if (!this.obj.url) {
-          throw new Error('no obj.url')
+          // throw new Error('no obj.url')
+          this.obj.url = ''
         }
         url = this.obj.url
       }
